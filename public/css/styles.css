@@ -132,7 +132,7 @@ h1#title-cse {
 }
 
 /*----------------------------start codes of left side----------------------------*/
-h1#del_upgrades {
+h2#del_upgrades {
   font: bold 35pt var(--paragraph-font);
   color: var(--paragraph-color-on-white);
 
@@ -228,7 +228,7 @@ ul { /*list of Delorean Review*/
   color: var(--paragraph-color-on-white);
 }
 
-h1#del_review {/* DMC Delorean Reviews*/
+h2#del_review {/* DMC Delorean Reviews*/
   font: bold 35pt var(--paragraph-font);
   color: var(--paragraph-color-on-white);
 }
