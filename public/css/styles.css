@@ -24,11 +24,16 @@
   --nav-hover-background-color: #8ECAE6;
 }
 
-html {
+/*html {
   background-image: url('/public/images/site/small_check.jpg');
-}
+}*/
 
 body {
+  background-image: url('/public/images/site/small_check.jpg');
+  /*display: block;*/
+}
+
+#content {
   background-color: white;
   border: 5px solid blue;
   border-radius: 10pt;
@@ -37,7 +42,6 @@ body {
   padding: 1em 0.5em;
   color: var(--primary-color);
   height: 200vh;
-  /*display: block;*/
 }
 
 header {
