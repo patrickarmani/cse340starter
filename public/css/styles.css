@@ -89,7 +89,7 @@ li.first_list:hover {
 }
 
 main {
-  background-image: url('/public/images/vehicles/delorean.jpg');
+  background-image: url('./public/images/vehicles/delorean.jpg');
   background-repeat: no-repeat;
   background-position: top;
   background-size: 70%;
