@@ -24,20 +24,17 @@
   --nav-hover-background-color: #8ECAE6;
 }
 
-/*html {
-  background-image: url('/public/images/site/small_check.jpg');
-}*/
-
 body {
   background-image: url('/public/images/site/small_check.jpg');
   /*display: block;*/
+  
 }
 
 #content {
   background-color: white;
   border: 5px solid blue;
   border-radius: 10pt;
-  max-width: 100%;
+  max-width: 90%;
   margin: 30px 110px;
   padding: 1em 0.5em;
   color: var(--primary-color);
@@ -51,23 +48,16 @@ header {
   font: bold 17pt var(--heading-font);
 }
 
-/*#menu {
-  
-}*/
-
 nav {
   background-color: var(--nav-background-color);
+  max-width: 100%;
   line-height: 2.0em;
   text-align: center;
-  font-size: 1.2em;
-  /*height: 50px;
-  cursor: pointer;
-  display:inline-flex;
-  color: #8ECAE6;*/
+  font-size: 1.0em;
   transition: 1s;
 }
-
 nav > ul {
+  margin-inline-end: 100%;
   list-style-type: none;
   display: flex;
 }
@@ -89,7 +79,7 @@ li.first_list {
   text-align: left;
   display: grid;
   float: left;
-  padding-inline: 100px; /*space between the items */
+  padding-inline: 98px; /*space between the items in menu*/
 }
 
 li.first_list:hover {
@@ -105,10 +95,12 @@ main {
   background-size: 70%;
   height: 100vh;
 }
+
 h1#title-cse {
   font: bold 50pt var(--heading-font);
 
 }
+
 #subtitle {
   font: bold 45pt var(--heading-font);
   margin-top: 10px;
@@ -116,125 +108,95 @@ h1#title-cse {
 }
 
 #transparent-block {
-  padding: 10px 15px;
+  padding: 20px 25px;
   margin: 50px 40px 90px 60px;
   background-color: rgba(255, 247, 247, 0.5);
   /*background-position: left center;*/
   background-attachment: fixed;
   color: rgb(28, 122, 172);
-  width: 250px;
+  width: 300px;
   text-align: left;
-  font: normal 15pt roboto;
-}
-#left-side {
-  float:left;
-  font: bold 20pt var(--paragraph-font);
-  width: 40%;
-  margin-top: 100px;
-  text-align: center;
-  /*line-height: 1.8;*/
+  font: normal 20pt roboto;
 }
 
-/*----------------------------start codes of left side----------------------------*/
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  grid-template-rows: auto auto; /* Two lines */
+  gap: 10px; /* Space between columns and photos */
+  padding: 20px; /* Internal space of the grid */
+  bottom: 0;
+  max-width: 98%;
+  
+}
+
+/*div.container_down {
+  /*height: 400px;
+  width: 400px;
+
+
+}*/
+
+.photo-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns inside the left column */
+  grid-template-rows: auto auto; /* Two lines inside the left column */
+  gap: 10px; /* Space between photos and names*/
+}
+
+.photo {
+
+  position: relative;
+  background-color: var(--primary-color); 
+  border: 3px solid #023047;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Blue rectangle inner space */
+  font-family: roboto;
+  color:#023047;
+  
+  
+}
+
+.photo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px; /* Space between photo and name */
+}
+
+.photo p {
+  text-align: center;
+  margin: 0; 
+}
+
+.name {
+  color: white;
+  margin:0; /* to avoid extra spaces */
+}
+
+.name:active{
+  color:var(--nav-hover-link-color);
+}
 h2#del_upgrades {
-  font: bold 35pt var(--paragraph-font);
-  color: var(--paragraph-color-on-white);
-
-}
-
-p.left_text_top {
-  margin-top:130px;
-  margin-left: -190px;
-  float:left;
-  font: normal 15pt var(--paragraph-font);
+  font: bold 30pt roboto;
   text-align: center;
 }
 
-img.left_pict_top {
-  background-color: rgb(46, 157, 205);
-  padding:10px 70px;
-  border: 2px solid var(--secondary-color);
-  margin-left: 30px;
-  float:left;
-  
+h2#del_review {
+  font-size: 30pt;
 }
-
-img.left_pict_down {
-  background-color: rgb(46, 157, 205);
-  padding:17px 70px;
-  border: 2px solid var(--secondary-color);
-  margin-top: 200px;
-  margin-left: -245px;
-  float:left;
-  
-}
-
-p.left_text_down {
-  margin-top: 330px;
-  margin-left: -200px;
-  float:left;
-  font: normal 15pt var(--paragraph-font);
-  text-align: center;
-}
-
-img.right_pict_top {
-  background-color: rgb(46, 157, 205);
-  padding:17px 105px;
-  border: 2px solid var(--secondary-color);
-  margin-top:-125px;
-  margin-left: 100px;
-  float:right;
-}
-
-p.right_text_top {
-  margin-top: 7px;
-  margin-right: 80px;
-  float: right;
-  font: normal 15pt var(--paragraph-font);
-  text-align: center;
-}
-
-img.right_pict_down {
-  background-color: rgb(46, 157, 205);
-  padding:12px 90px;
-  border: 2px solid var(--secondary-color);
-  margin-top: 20px;
-  margin-left: 100px;
-  float:right;
-}
-
-p.right_text_down {
-  margin-top: 150px;
-  margin-right: -285px;
-  float: right;
-  font: normal 15pt var(--paragraph-font);
-  text-align: center;
-}
-
-/*----------------------------end codes of left side ----------------------------*/
 
 
 
 #right-side {
-  float:right;
-  width: 40%;
-  margin-top: 100px;
-  text-align: left;
-}
-
-section h1#right-side {
-  font: 50pt ;
-}
-
-ul { /*list of Delorean Review*/
-  font: normal 20pt var(--paragraph-font);
-  line-height: 2.3; /*space betwween lines*/
-  color: var(--paragraph-color-on-white);
-}
-
-h2#del_review {/* DMC Delorean Reviews*/
-  font: bold 35pt var(--paragraph-font);
-  color: var(--paragraph-color-on-white);
+  font-family: roboto;
+  font-size: 20pt;
+  line-height: 1.8em;
+  text-align: justify;
+  margin: 0 10px 20px 80px ;
 }
 
 #info {
@@ -243,3 +205,4 @@ h2#del_review {/* DMC Delorean Reviews*/
   text-align: justify;
   margin-top: 450px;
 }
+
