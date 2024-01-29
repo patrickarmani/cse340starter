@@ -50,7 +50,7 @@ header {
 
 nav {
   background-color: var(--nav-background-color);
-  max-width: 100%;
+  max-width: 90%;
   line-height: 2.0em;
   text-align: center;
   font-size: 1.0em;
