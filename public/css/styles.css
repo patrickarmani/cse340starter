@@ -407,8 +407,8 @@ body {
 
   
 
-  #info {
-      margin-top: 50px; /* Adjust top margin for smaller screens */
+  footer#info {
+      margin-top: 70px; /* Adjust top margin for smaller screens */
       font-size: 8pt;
   }
 }
