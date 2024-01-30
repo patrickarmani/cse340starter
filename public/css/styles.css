@@ -48,6 +48,46 @@ header {
   font: bold 17pt var(--heading-font);
 }
 
+
+/* Start here the My Account btn*/
+.header {
+  position: relative;
+}
+
+#myAccountBtn {
+  position: absolute;
+  top: -130px;
+  right: 30px;
+  padding: 10px;
+  color: var(--secondary-color);
+  font-family: roboto;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#myAccountBtn:hover {
+  text-decoration: underline; /* Adds underline on hover */
+}
+
+#accountForm {
+  position: absolute;
+  top: 70px;
+  right: 30px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/* End here the My Account btn*/
+
 nav {
   background-color: var(--nav-background-color);
   max-width: 100%;
