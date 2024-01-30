@@ -67,9 +67,9 @@ header {
   cursor: pointer;
 }
 
-#myAccountBtn:hover {
-  text-decoration: underline; /* Adds underline on hover */
-}
+/*#myAccountBtn:hover {
+  /*text-decoration: underline; /* Adds underline on hover 
+}*/
 
 #accountForm {
   position: absolute;
@@ -111,7 +111,7 @@ nav a:hover {
   background-color: var(--nav-background-color);
   transform: scale(2.3);
   box-shadow: 2px 2px 2px #000;
-  z-index: 4;
+  /*z-index: 4;*/
 }
 
 li.first_list {
@@ -133,7 +133,7 @@ main {
   background-repeat: no-repeat;
   background-position: top;
   background-size: 70%;
-  height: 100vh;
+  height: 50%;
 }
 
 h1#title-cse {
@@ -250,3 +250,165 @@ h2#del_review {
   margin-top: 450px;
 }
 
+/* Default styles for all devices */
+body {
+  font-size: 16px;
+}
+
+/* Media Query para dispositivos com largura menor ou igual a 600 pixels */
+@media screen and (max-width: 600px) {
+  body {
+      /*font-size: 14px;*/
+    background-image: url('../images/site/small_check.png');
+  }
+
+  #content {
+      margin: 10px; /* Reduzir margem para telas menores */
+      background-color: white;
+      border: 2.5px solid blue;
+      border-radius: 5pt;
+      max-width: 100%;
+      
+      
+      color: var(--primary-color);
+      height: 200vh;
+  }
+
+  header {
+      font-size: 16px; /* Ajustar tamanho da fonte no cabeçalho para telas menores */
+      top: 20px;
+      padding: 1em;
+      color: black;
+      
+  }
+
+  #myAccountBtn {
+      
+      position: absolute;
+      top: -60px;
+      right: -5px;
+      padding: 10px;
+      color: var(--secondary-color);
+      font-family: roboto;
+      font-weight: bold;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+  }
+
+  #accountForm {
+      top: 50px;
+      position: absolute;
+      
+      right: 30px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      display: none;
+  }
+
+  nav {
+      /*font-size: 14px; /* Ajustar tamanho da fonte no menu de navegação para telas menores */
+      background-color: var(--nav-background-color);
+      
+      max-width: 100%;
+      line-height: 2.0em;
+      text-align: left;
+      font-size: 12px;
+      transition: 1s;
+      
+  }
+
+  
+  li.first_list {
+      display: flex;
+      justify-content: space-between;
+      padding-inline: 10px; /* Ajustar o espaço entre os itens de menu para telas menores */
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      
+      float: left;
+      
+  }
+
+  main {
+     
+      background-image: url('/public/images/vehicles/delorean.jpg');
+      
+      
+  }
+
+  h1#title-cse {
+      font-size: 30px; /* Ajustar o tamanho da fonte para telas menores */
+      top: 10px;
+  }
+
+  h1#subtitle {
+      font-size: 16px; /* Ajustar o tamanho da fonte para telas menores */
+      margin-left: 10px; /* Ajustar a margem para telas menores */
+      margin-top: -15px;
+      
+  }
+
+  #transparent-block {
+      width: 100px; /* Fazer o bloco transparente ocupar a largura total para telas menores */
+      margin: 5px 0; /* Ajustar margem para telas menores */
+
+      padding: 3px 3px;
+      margin: 5px 4px 9px 6px;
+      background-color: rgba(255, 247, 247, 0.5);
+      color: rgb(28, 122, 172);
+      text-align: left;
+      font: normal 8pt roboto;
+  }
+
+  .container {
+      display: grid;
+      grid-template-columns: 1fr; /* one columns */
+      grid-template-rows: auto auto; /* Two lines */
+      gap: 5px; /* Space between columns and photos */
+      padding: 5px; /* Internal space of the grid */
+      bottom: 0;
+      max-width: 98%;
+  }
+
+  .photo-container {
+      grid-template-columns: 1fr 1fr ; /* Alterar para uma única coluna para telas menores */
+  }
+
+  .photo {
+      padding: 10px; /* Ajustar o espaço interno da foto para telas menores */
+      position: relative;
+      
+  }
+
+  h2#del_upgrades {
+      font-size: 30px; /* Ajustar o tamanho da fonte para telas menores */
+      grid-row: 2;
+      grid-column: 1;
+  }
+
+  h2#del_review {
+    font-size: 30px;
+    text-align: center;
+    margin-left: 15px; 
+  }
+
+  #right-side {
+      font-size: 16px; /* Ajustar o tamanho da fonte para telas menores */
+      margin-left: -10px; /* Ajustar margens para telas menores */
+      line-height: 2.0em;
+      text-align: left;
+      grid-row: 2;
+      grid-column: 1;
+  }
+
+  
+
+  #info {
+      margin-top: 20px; /* Ajustar a margem superior para telas menores */
+      font-size: 8pt;
+  }
+}
