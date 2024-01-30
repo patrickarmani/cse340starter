@@ -142,6 +142,7 @@ h1#title-cse {
 }
 
 #subtitle {
+  color:var(--headline-color-on-white);
   font: bold 45pt var(--heading-font);
   margin-top: 10px;
   margin-left: 30px;
@@ -221,17 +222,20 @@ h1#title-cse {
   color:var(--nav-hover-link-color);
 }
 h2#del_upgrades {
+  color:var(--headline-color-on-white);
   font: bold 30pt roboto;
   text-align: center;
 }
 
 h2#del_review {
+  color:var(--headline-color-on-white);
   font-size: 30pt;
 }
 
 
 
 #right-side {
+  color:var(--headline-color-on-white);
   font-family: roboto;
   font-size: 20pt;
   line-height: 1.8em;
@@ -242,7 +246,7 @@ h2#del_review {
 #info {
   
   color:rgb(28, 122, 172);
-  text-align: justify;
+  /*text-align: justify;*/
   margin-top: 450px;
 }
 
