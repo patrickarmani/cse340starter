@@ -255,7 +255,7 @@ body {
   font-size: 16px;
 }
 
-/* Media Query para dispositivos com largura menor ou igual a 600 pixels */
+/* Media Query for devices with width less than or equal to 600 pixels*/
 @media screen and (max-width: 600px) {
   body {
       /*font-size: 14px;*/
@@ -263,7 +263,7 @@ body {
   }
 
   #content {
-      margin: 10px; /* Reduzir margem para telas menores */
+      margin: 10px; /* Reduce margin for smaller screens */
       background-color: white;
       border: 2.5px solid blue;
       border-radius: 5pt;
@@ -275,7 +275,7 @@ body {
   }
 
   header {
-      font-size: 16px; /* Ajustar tamanho da fonte no cabeçalho para telas menores */
+      font-size: 16px; /* Adjust font size in header for smaller screens */
       top: 20px;
       padding: 1em;
       color: black;
@@ -309,7 +309,7 @@ body {
   }
 
   nav {
-      /*font-size: 14px; /* Ajustar tamanho da fonte no menu de navegação para telas menores */
+      
       background-color: var(--nav-background-color);
       
       max-width: 100%;
@@ -324,7 +324,7 @@ body {
   li.first_list {
       display: flex;
       justify-content: space-between;
-      padding-inline: 10px; /* Ajustar o espaço entre os itens de menu para telas menores */
+      padding-inline: 10px; /* Adjust space between menu items for smaller screens */
       color: white;
       text-align: center;
       text-transform: uppercase;
@@ -341,20 +341,20 @@ body {
   }
 
   h1#title-cse {
-      font-size: 30px; /* Ajustar o tamanho da fonte para telas menores */
+      font-size: 30px; /* Adjust font size for smaller screens */
       top: 10px;
   }
 
   h1#subtitle {
-      font-size: 16px; /* Ajustar o tamanho da fonte para telas menores */
-      margin-left: 10px; /* Ajustar a margem para telas menores */
+      font-size: 16px; /* Adjust font size for smaller screens */
+      margin-left: 10px; /* Adjust margin for smaller screens */
       margin-top: -15px;
       
   }
 
   #transparent-block {
-      width: 100px; /* Fazer o bloco transparente ocupar a largura total para telas menores */
-      margin: 5px 0; /* Ajustar margem para telas menores */
+      width: 100px; /* Make the transparent block full width for smaller screens */
+      margin: 5px 0; /* Adjust margin for smaller screens */
 
       padding: 3px 3px;
       margin: 5px 4px 9px 6px;
@@ -375,17 +375,17 @@ body {
   }
 
   .photo-container {
-      grid-template-columns: 1fr 1fr ; /* Alterar para uma única coluna para telas menores */
+      grid-template-columns: 1fr 1fr ; /* Change to a single column for smaller screens */
   }
 
   .photo {
-      padding: 10px; /* Ajustar o espaço interno da foto para telas menores */
+      padding: 10px; /* Adjust internal photo space for smaller screens */
       position: relative;
       
   }
 
   h2#del_upgrades {
-      font-size: 30px; /* Ajustar o tamanho da fonte para telas menores */
+      font-size: 30px; /* Adjust font size for smaller screens */
       grid-row: 2;
       grid-column: 1;
   }
@@ -397,8 +397,8 @@ body {
   }
 
   #right-side {
-      font-size: 16px; /* Ajustar o tamanho da fonte para telas menores */
-      margin-left: -10px; /* Ajustar margens para telas menores */
+      font-size: 16px; /* Adjust font size for smaller screens */
+      margin-left: -10px; /* Adjust margins for smaller screens */
       line-height: 2.0em;
       text-align: left;
       grid-row: 2;
@@ -408,7 +408,7 @@ body {
   
 
   #info {
-      margin-top: 20px; /* Ajustar a margem superior para telas menores */
+      margin-top: 20px; /* Adjust top margin for smaller screens */
       font-size: 8pt;
   }
 }
