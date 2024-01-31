@@ -23,7 +23,7 @@
   --nav-hover-link-color: #FB8500;
   --nav-hover-background-color: #8ECAE6;
 }
-
+@media screen and (min-width: 600px) {
 body {
   background-image: url('../images/site/small_check.jpg');
   /*display: block;*/
@@ -254,7 +254,7 @@ h2#del_review {
 body {
   font-size: 16px;
 }
-
+}
 /* Media Query for devices with width less than or equal to 600 pixels*/
 @media screen and (max-width: 600px) {
   body {
