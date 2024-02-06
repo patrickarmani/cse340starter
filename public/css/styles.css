@@ -123,7 +123,7 @@ li.first_list {
 }
 
 li.first_list:hover {
-  color: #8ECAE6;
+  color: white;
   background-color: #8ECAE6;
   
 }
@@ -333,7 +333,7 @@ h2#del_review {
       text-align: left;
       text-transform: uppercase;
       font: normal 0.8em roboto;
-      float: center;
+      /*float: center;*/
       
   }
 
