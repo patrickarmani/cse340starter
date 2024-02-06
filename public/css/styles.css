@@ -253,7 +253,7 @@ h2#del_review {
 
 
 /* Media Query for devices with width less than or equal to 600 pixels*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   body {
       /*font-size: 14px;*/
     background-image: url('../images/site/small_check.png');
@@ -328,12 +328,12 @@ h2#del_review {
   li.first_list {
       display: flex;
       justify-content: space-between;
-      padding-inline: 8px; /* Adjust space between menu items for smaller screens */
+      padding-inline: 15px; /* Adjust space between menu items for smaller screens */
       color: white;
-      text-align: center;
+      text-align: left;
       text-transform: uppercase;
-      font: normal 10pt roboto;
-      float: left;
+      font: normal 0.8em roboto;
+      float: center;
       
   }
 
@@ -359,13 +359,13 @@ h2#del_review {
   #transparent-block {
       width: 100px; /* Make the transparent block full width for smaller screens */
       margin: 5px 0; /* Adjust margin for smaller screens */
-
+      display: block;
       padding: 3px 3px;
       margin: 5px 4px 9px 6px;
       background-color: rgba(255, 247, 247, 0.5);
       color: rgb(28, 122, 172);
       text-align: left;
-      font: normal 8pt roboto;
+      font: normal 0.7em roboto;
   }
 
   .container {
