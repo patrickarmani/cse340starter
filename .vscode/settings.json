@@ -1,0 +1,25 @@
+{
+    "sqltools.connections": [
+        {
+            "pgOptions": {
+                "ssl": true
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "driver": "PostgreSQL",
+            "name": "render.com",
+            "connectString": "postgres://cse340pa:bKVFi8pOr51a5Yy5HCq2cEKqFeQJudh7@dpg-cmlebugcmk4c73dql67g-a.oregon-postgres.render.com/cse340pa"
+        },
+        {
+            "pgOptions": {
+                "ssl": true
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "driver": "PostgreSQL",
+            "name": "Render.com",
+            "connectString": "postgres://cse340pa:bKVFi8pOr51a5Yy5HCq2cEKqFeQJudh7@dpg-cmlebugcmk4c73dql67g-a.oregon-postgres.render.com/cse340pa"
+        }
+    ],
+    "liveServer.settings.port": 5501
+}

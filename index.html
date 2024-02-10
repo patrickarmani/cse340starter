@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assigment 1 - CSE 340</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="public/css/styles.css" media="screen">
+</head>
+<body>
+    <div id="content">
+        <header>
+            <div class="logo-box"></div>
+            <h1 id="title-cse">CSE MOTORS</h1>
+
+            <div class="header">
+                <button id="myAccountBtn">My Account</button>
+                <div id="accountForm" class="hidden">
+                    <form id="loginForm">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+        
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+        
+                        <button type="button" onclick="submitForm()">Login</button>
+                    </form>
+                </div>
+            </div>
+
+        <!--<div id="menu">-->
+            <div>
+                <nav id="menu">
+                    <ul>
+                        <li class="first_list"><a href="index.html">Home</a></li>
+                        <li class="first_list"><a href="custom.html">Custom</a></li>
+                        <li class="first_list"><a href="sedan.html">Sedan</a></li>
+                        <li class="first_list"><a href="suv.html">SUV</a></li>
+                        <li class="first_list"><a href="truck.html">Truck</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+        </header>
+        <main>
+            <h1 id="subtitle">Welcome to CSE Motors!</h1>
+            <section id="transparent-block">
+                <h2>DMC Delorean</h2>
+                <!--<p>3 Cup holders<br>Superman doors<br>Fuzzy dice!</p><-->
+                <h3>3 Cup holders</h3>
+                <h4>Superman doors</h4>
+                <h4>Fuzzy dice!</h4>
+                <img id="own_today" src="public/images/site/own_today.png" alt="own_today" width="100">
+            </section>
+            <div class="container">
+
+                <div class="container_down">
+                    
+                    <section id="left-side">
+                        <h2 id="del_upgrades">Delorean Upgrades</h2>
+                        
+                        <!-- picture and hiperlink - left side page home-->
+                        <div class="photo-container">
+                            <div class="photo">
+
+                                <img src="public/images/upgrades/flux-cap.png" alt="flux cap" width="100">
+                                <p class="name"><a href="https://www.youtube.com/shorts/6FMk6L-G_d0">Flux Capacitor</a></p>
+
+                            </div>
+                            <div class="photo">
+
+                                <img src="public/images/upgrades/flame.jpg" alt="Flame Decals" width="70">
+                                <p class="name"><a href="https://www.youtube.com/watch?v=1PjS4SnytUo">Flame Decals</a></p>
+
+                            </div>
+
+                            <div class="photo">
+
+                                <img src="public/images/upgrades/bumper_sticker.jpg" alt="bumper_sticker" width="100">
+                                <p class="name"><a href="https://www.youtube.com/shorts/bgeR0nUViXs">Bumper Stickers</a></p>
+
+                            </div>
+
+                            <div class="photo">
+
+                                <img src="public/images/upgrades/hub-cap.jpg" alt="hub-cap" width="100">
+                                <p class="name"><a href="https://www.youtube.com/shorts/Wms30L-UxHU">Hub Caps</a></p>
+
+                            </div>
+                            
+                        </div>
+                            
+                        
+                    </section>
+                </div>
+
+                <div class="container_down">
+                    <section id="right-side">
+                        <h2 id="del_review">DMC Delorean Reviews</h2>
+
+                            <ul>
+                                <li>"So fast it's almost like  traveling  in time 4/5"</li>
+                                <li>"Coolest ride onde the road." (4/5)</li>
+                                <li>"I'm felling MacFly!.(5/5)"</li>
+                                <li>"The most futuristic ride of our day (4.5/5)"</li>
+                                <li>"80's livin and I love it!"(5/5)</li>
+                            </ul>
+
+                    </section>
+                    
+                </div>
+
+            </div>
+        
+        </main>
+        <footer>
+            <p id="info"> &copy; 2024 CSE 340 APP - Patick Armani</p>
+        </footer>
+    </div>
+    <script src="/public/js/script.js"></script>
+</body>
+</html>

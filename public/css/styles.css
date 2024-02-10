@@ -1,6 +1,417 @@
-/******* Change Box Model ***************/
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+/*Font family taked by Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100;0,800;1,200;1,400&family=Open+Sans:ital,wght@0,400;0,700;1,300&family=Roboto&display=swap');
+
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #8ECAE6;
+  --secondary-color: #023047;
+  --accent1-color: #FB8500;
+  --accent2-color: white;
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: "DM Sans";
+  --paragraph-font: "Open sans", Helvetica, sans-serif;
+
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: #023047;  /* headlines on a white background */ 
+  --headline-color-on-color: #FFFFFF; /* headlines on a colored background */ 
+  --paragraph-color-on-white: #023047; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: #FFFFFF; /* paragraph text on a colored background */ 
+  --text-background-color: #023047;
+  --nav-link-color: #8ECAE6;
+  --nav-background-color: #023047;
+  --nav-hover-link-color: #FB8500;
+  --nav-hover-background-color: #8ECAE6;
+}
+
+body {
+  background-image: url('../images/site/small_check.jpg');
+  /*display: block;*/
+  height: 100%;
+  
+}
+
+#content {
+  background-color: white;
+  border: 5px solid blue;
+  border-radius: 10pt;
+  max-width: 90%;
+  margin: 30px 110px;
+  padding: 1em 0.5em;
+  color: var(--primary-color);
+  height: 220vh;
+}
+
+header {
+  top: 30px;
+  padding: 1em;
+  color: black;
+  font: bold 17pt var(--heading-font);
+}
+
+
+/* Start here the My Account btn*/
+.header {
+  position: relative;
+}
+
+#myAccountBtn {
+  position: absolute;
+  top: -130px;
+  right: 30px;
+  padding: 10px;
+  color: var(--secondary-color);
+  font-family: roboto;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/*#myAccountBtn:hover {
+  /*text-decoration: underline; /* Adds underline on hover 
+}*/
+
+#accountForm {
+  position: absolute;
+  top: 70px;
+  right: 30px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/* End here the My Account btn*/
+
+nav {
+  background-color: var(--nav-background-color);
+  max-width: 100%;
+  line-height: 2.5em;
+  text-align: center;
+  font-size: 1.0em;
+  transition: 1s;
+}
+nav > ul {
+  margin-inline-end: 100%;
+  list-style-type: none;
+  display: flex;
+}
+
+nav a:link, nav a:visited {
+  color: white;
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-background-color);
+  transform: scale(2.3);
+  box-shadow: 2px 2px 2px #000;
+  /*z-index: 4;*/
+}
+
+li.first_list {
+  color: white;
+  text-align: center;
+  display: inline-flex;
+  padding-inline: 80px; /*space between the items in menu*/
+}
+
+li.first_list:hover {
+  color: white;
+  background-color: #8ECAE6;
+  
+}
+
+main {
+  background-image: url('/public/images/vehicles/delorean.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 70%;
+}
+
+h1#title-cse {
+  font: bold 50pt var(--heading-font);
+
+}
+
+#subtitle {
+  color:var(--headline-color-on-white);
+  font: bold 40pt var(--heading-font);
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+#transparent-block {
+  padding: 20px 25px;
+  margin: 50px 40px 90px 60px;
+  background-color: rgba(255, 247, 247, 0.5);
+  /*background-position: left center;*/
+  background-attachment: fixed;
+  color: rgb(28, 122, 172);
+  width: 300px;
+  text-align: left;
+  font: normal 20pt roboto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  grid-template-rows: auto auto; /* Two lines */
+  gap: 10px; /* Space between columns and photos */
+  padding: 20px; /* Internal space of the grid */
+  bottom: 0;
+  max-width: 98%;
+  
+}
+
+/*div.container_down {
+  /*height: 400px;
+  width: 400px;
+
+
+}*/
+
+.photo-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns inside the left column */
+  grid-template-rows: auto auto; /* Two lines inside the left column */
+  gap: 10px; /* Space between photos and names*/
+}
+
+.photo {
+
+  position: relative;
+  background-color: var(--primary-color); 
+  border: 3px solid #023047;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Blue rectangle inner space */
+  font-family: roboto;
+  color:#023047;
+  
+  
+}
+
+.photo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px; /* Space between photo and name */
+}
+
+.photo p {
+  text-align: center;
+  margin: 0; 
+}
+
+.name {
+  color: white;
+  margin:0; /* to avoid extra spaces */
+}
+
+.name:active{
+  color:var(--nav-hover-link-color);
+}
+h2#del_upgrades {
+  color:var(--headline-color-on-white);
+  font: bold 30pt roboto;
+  text-align: center;
+}
+
+h2#del_review {
+  color:var(--headline-color-on-white);
+  font-size: 30pt;
+}
+
+
+
+#right-side {
+  color:var(--headline-color-on-white);
+  font-family: roboto;
+  font-size: 20pt;
+  line-height: 1.8em;
+  text-align: justify;
+  margin: 0 10px 20px 80px ;
+}
+
+#info {
+  
+  color:rgb(28, 122, 172);
+  /*text-align: justify;*/
+  margin-top: auto;
+}
+
+/* Default styles for all devices */
+
+
+/* Media Query for devices with width less than or equal to 600 pixels*/
+@media screen and (max-width: 800px) {
+  body {
+      /*font-size: 14px;*/
+    background-image: url('../images/site/small_check.png');
+    height: 70%;
+  }
+
+  #content {
+      margin: 10px; /* Reduce margin for smaller screens */
+      background-color: white;
+      border: 2.5px solid blue;
+      border-radius: 5pt;
+      max-width: 100%;
+      
+      
+      color: var(--primary-color);
+      height: 200vh;
+  }
+
+  header {
+      font-size: 16px; /* Adjust font size in header for smaller screens */
+      top: 20px;
+      padding: 1em;
+      color: black;
+      
+  }
+
+  #myAccountBtn {
+      
+      position: absolute;
+      top: -60px;
+      right: -5px;
+      padding: 10px;
+      color: var(--secondary-color);
+      font-family: roboto;
+      font-weight: bold;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+  }
+
+  #accountForm {
+      top: 50px;
+      position: absolute;
+      
+      right: 30px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      display: none;
+  }
+
+  nav {
+      
+      background-color: var(--nav-background-color);
+      
+      max-width: 100%;
+      line-height: 1.5em;
+      text-align: center;
+      font-size: 12px;
+      transition: 1s;
+      
+  }
+
+  nav > ul {
+    margin-inline-end: 70%;
+    list-style-type: none;
+    display: flex;
+  }
+
+  
+  li.first_list {
+      display: flex;
+      justify-content: space-between;
+      padding-inline: 15px; /* Adjust space between menu items for smaller screens */
+      color: white;
+      text-align: left;
+      text-transform: uppercase;
+      font: normal 0.8em roboto;
+      /*float: center;*/
+      
+  }
+
+  main {
+     
+      background-image: url('/public/images/vehicles/delorean-tn.jpg');
+      
+      
+  }
+
+  h1#title-cse {
+      font-size: 30px; /* Adjust font size for smaller screens */
+      top: 10px;
+  }
+
+  h1#subtitle {
+      font-size: 16px; /* Adjust font size for smaller screens */
+      margin-left: 10px; /* Adjust margin for smaller screens */
+      margin-top: -15px;
+      
+  }
+
+  #transparent-block {
+      width: 100px; /* Make the transparent block full width for smaller screens */
+      margin: 5px 0; /* Adjust margin for smaller screens */
+      display: block;
+      padding: 3px 3px;
+      margin: 5px 4px 9px 6px;
+      background-color: rgba(255, 247, 247, 0.5);
+      color: rgb(28, 122, 172);
+      text-align: left;
+      font: normal 0.7em roboto;
+  }
+
+  .container {
+      display: grid;
+      grid-template-columns: 1fr; /* one columns */
+      grid-template-rows: auto auto; /* Two lines */
+      gap: 5px; /* Space between columns and photos */
+      padding: 5px; /* Internal space of the grid */
+      bottom: 0;
+      max-width: 98%;
+  }
+
+  .photo-container {
+      grid-template-columns: 1fr 1fr ; /* Change to a single column for smaller screens */
+  }
+
+  .photo {
+      padding: 10px; /* Adjust internal photo space for smaller screens */
+      position: relative;
+      
+  }
+
+  h2#del_upgrades {
+      font-size: 30px; /* Adjust font size for smaller screens */
+      
+  }
+
+  h2#del_review {
+    font-size: 30px;
+    text-align: center;
+    margin-left: 15px; 
+  }
+
+  #right-side {
+      font-size: 16px; /* Adjust font size for smaller screens */
+      margin-left: -10px; /* Adjust margins for smaller screens */
+      line-height: 2.0em;
+      text-align: left;
+      grid-row: 3;
+      grid-column: 1;
+  }
+
+  
+
+  footer#info {
+      margin-top: 70px; /* Adjust top margin for smaller screens */
+      font-size: 8pt;
+  }
 }
