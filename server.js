@@ -27,10 +27,10 @@ app.set("layout", "./layouts/layout") // not at views root
 /* ***********************
  * Routes
  *************************/
-app.use(static)
+app.use(require("./routes/static"))
 //Index route
 /*5 - Alter the route to match the image showed in Alter the "Index Route"*/
-app.get("/", baseController.buildHome)
+app.get("/", utilities.handleErrors(baseController.buildHome))
 
 
 /*app.get("/", function(req, res){
