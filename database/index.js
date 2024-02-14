@@ -1,4 +1,4 @@
-const { Pool } = require("pg") /* A pool is a collection of connection objects*/
+const { Pool } = require("pg")
 require("dotenv").config()
 /* ***************
  * Connection Pool
@@ -6,11 +6,11 @@ require("dotenv").config()
  * But will cause problems in production environment
  * If - else will make determination which to use
  * *************** */
-let pool /*creates a local pool variable to hold the functionality of the "Pool" connection.*/
+let pool
 if (process.env.NODE_ENV == "development") {
   pool = new Pool({
     connectionString: process.env.DATABASE_URL,
-    ssl: { /* Secure Socket Layer (ssl)*/
+    ssl: {
       rejectUnauthorized: false,
     },
 })

@@ -11,8 +11,10 @@ const expressLayouts = require("express-ejs-layouts")
 const env = require("dotenv").config()
 const app = express()
 const static = require("./routes/static")
-
 const baseController = require("./controllers/baseController")
+
+
+
 
 
 /* ***********************
@@ -29,6 +31,7 @@ app.use(static)
 //Index route
 /*5 - Alter the route to match the image showed in Alter the "Index Route"*/
 app.get("/", baseController.buildHome)
+
 
 /*app.get("/", function(req, res){
   res.render("index", {title: "Home"})
