@@ -5,11 +5,17 @@
 /* ***********************
  * Require Statements
  *************************/
+
 const express = require("express")
 const expressLayouts = require("express-ejs-layouts")
 const env = require("dotenv").config()
 const app = express()
 const static = require("./routes/static")
+const baseController = require("./controllers/baseController")
+
+
+
+
 
 /* ***********************
  * View Engine and Templates
@@ -21,11 +27,15 @@ app.set("layout", "./layouts/layout") // not at views root
 /* ***********************
  * Routes
  *************************/
-app.use(static)
+app.use(require("./routes/static"))
 //Index route
-app.get("/", function(req, res){
+/*5 - Alter the route to match the image showed in Alter the "Index Route"*/
+app.get("/", utilities.handleErrors(baseController.buildHome))
+
+
+/*app.get("/", function(req, res){
   res.render("index", {title: "Home"})
-})
+})*/
 
 /* ***********************
  * Local Server Information
@@ -40,3 +50,4 @@ const host = process.env.HOST
 app.listen(port, () => {
   console.log(`app listening on ${host}:${port}`)
 })
+
