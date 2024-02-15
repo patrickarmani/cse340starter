@@ -1,0 +1,9 @@
+<% if (title) { %>
+    <h1><%= title %></h1>
+    <%} else {
+        res.redirect('/')
+    } %>
+    <div id="crash">
+    <p id="error-message"><%- message %></p>
+    <img src="/images/site/videoframe_8747.png" alt="flamingos very lost">
+    </div>
