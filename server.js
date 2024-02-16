@@ -11,6 +11,7 @@ const env = require("dotenv").config()
 const app = express()
 const baseController = require("./controllers/baseController")
 const utilities = require("./utilities/")
+/*added in w04 Apply the Packages */
 const session = require("express-session")
 const pool = require('./database/')
 const bodyParser = require("body-parser")
@@ -30,6 +31,8 @@ resave: true,
 saveUninitialized: true,
 name: 'sessionId', 
 }))
+
+app.use(cookieParser())
 
 
 
