@@ -6,6 +6,8 @@
  * Require Statements
  *************************/
 const express = require("express")
+const session = require("express-session")
+const pool = require('./database/')
 const expressLayouts = require("express-ejs-layouts") /* it added according view Engine: https://blainerobertson.github.io/340-js/views/ejs.html*/
 const env = require("dotenv").config()
 const app = express()
@@ -14,7 +16,19 @@ const baseController = require("./controllers/baseController")
 const inventoryRoute = require("./routes/inventoryRoute");
 const utilities = require("./utilities/");
 
-
+/* ***********************
+ * Middleware
+ * ************************/
+app.use(session({
+  store: new (require('connect-pg-simple')(session))({
+    createTableIfMissing: true,
+    pool,
+  }),
+  secret: process.env.SESSION_SECRET,
+  resave: true,
+  saveUninitialized: true,
+  name: 'sessionId',
+}))
 
 /* ***********************
  * View Engine and Templates
@@ -31,7 +45,7 @@ app.use(static)
 
 
 // Index route
-app.get("/", baseController.buildHome);
+app.get("/", utilities.handleErrors(baseController.buildHome))
 /*https://blainerobertson.github.io/340-js/views/mvc-start.html*/
 /*app.get("/", function(req, res){
   res.render("index", {title: "Home"})
@@ -70,9 +84,10 @@ app.use(async (req, res, next) => {
 app.use(async (err, req, res, next) => {
   let nav = await utilities.getNav()
   console.error(`Error at: "${req.originalUrl}": ${err.message}`)
+  if(err.status == 404){ message = err.message} else {message = 'Oh no! There was a crash. Maybe try a different route?'}
   res.render("errors/error", {
     title: err.status || 'Server Error',
-    message: err.message,
-    nav,
+    message,
+    nav
   })
 })
