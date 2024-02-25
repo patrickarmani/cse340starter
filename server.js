@@ -15,6 +15,10 @@ const static = require("./routes/static")
 const baseController = require("./controllers/baseController")
 const inventoryRoute = require("./routes/inventoryRoute");
 const utilities = require("./utilities/");
+const accountRoute = require("./routes/accountRoute")
+const cookieParser = require("cookie-parser")
+const accountController = require("./controllers/accountController");
+
 
 /* ***********************
  * Middleware
@@ -29,6 +33,17 @@ app.use(session({
   saveUninitialized: true,
   name: 'sessionId',
 }))
+
+// Express Messages Middleware
+app.use(require('connect-flash')())
+app.use(function(req, res, next){
+  res.locals.messages = require('express-messages')(req, res)
+  next()
+})
+// unit 5 - Login: JWT and Cookie -  cookie parser
+app.use(cookieParser())
+
+
 
 /* ***********************
  * View Engine and Templates
@@ -54,6 +69,17 @@ app.get("/", utilities.handleErrors(baseController.buildHome))
 // Inventory routes 
 // https://blainerobertson.github.io/340-js/views/inv-delivery-classification.html - server.js File
 app.use("/inv", require("./routes/inventoryRoute"))
+
+// Account routes - unit 4 - activity
+app.use("/account", require("./routes/accountRoute"))
+
+//**** */ Route to build login view ****
+app.get("/login", utilities.handleErrors(accountController.buildLogin));
+
+// File Not Found Route - must be last route in list
+app.use(async (req, res, next) => {
+  next({status: 404, message: 'Sorry, we appear to have lost that page.'})
+})
 
 /* ***********************
  * Local Server Information

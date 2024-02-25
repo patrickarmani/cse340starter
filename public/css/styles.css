@@ -53,9 +53,19 @@ header {
 /* Start here the My Account btn*/
 .header {
   position: relative;
+  position: absolute;
+  top: 130px;
+  right: 140px;
+  padding: 10px;
+  color: var(--secondary-color);
+  font-family: roboto;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-#myAccountBtn {
+/*#myAccountBtn {
   position: absolute;
   top: -130px;
   right: 30px;
@@ -66,7 +76,7 @@ header {
   background-color: transparent;
   border: none;
   cursor: pointer;
-}
+}*/
 
 /*#myAccountBtn:hover {
   /*text-decoration: underline; /* Adds underline on hover 
@@ -280,7 +290,7 @@ h2#del_review {
 }
 
 #inv-display li h2{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: .8rem;
 }
 
@@ -299,17 +309,70 @@ h2#del_review {
 
 #inv-display li hr {
   height: 6px;
-  background-color: #000;
+  background-color: var(--secondary-color);
 }
 
 #crash {
   width: 50%;
 }
 
+.mensagem-vermelha {
+  color:red;
+}
 
+/*CSS for the Login Page*/
 
+form fieldset {
+  background-color: var(--secondary-color);
+  width: 30%;
+  margin: auto;
+}
 
+form fieldset input {
+  display: block;
+  width: 100%;
+}
 
+#submit {
+  width: 40%;
+  display: block;
+  margin: 10px auto;
+}
+
+form input,
+form label,
+form legend,
+form span {
+  font-family: "DM Sans", "Open Sans", Roboto, Verdana, sans-serif;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.form-italics {
+  display: block;
+  margin: 0.5rem;
+  color:#ddd;
+}
+
+input:required:invalid,
+input:focus:invalid {
+  /* insert your own styles for invalid form input */
+  background-color: var(--primary-color);
+}
+
+input:required:valid {
+  /* insert your own styles for valid form input */
+  background-color: rgb(132, 130, 130);
+}
+
+.notice {
+  font-size: larger;
+  color: red;
+  font-style: italic;
+  list-style-type: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
 
 
 
@@ -407,7 +470,7 @@ h2#del_review {
 
   main {
      
-      background-image: url('/public/images/vehicles/delorean-tn.jpg');
+      background-image: url('./images/vehicles/delorean-tn.jpg');
       
       
   }

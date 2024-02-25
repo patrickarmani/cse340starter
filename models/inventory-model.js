@@ -1,3 +1,5 @@
+/*Unit 3 - The Inventory Model*/
+
 const pool = require("../database/")
 
 /* ***************************

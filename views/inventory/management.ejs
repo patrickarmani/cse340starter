@@ -1,0 +1,22 @@
+<% if (title) { %>
+    <h1><%= title %></h1>
+    <% } else {
+      res.redirect('/')
+    } %>
+
+<%- messages() %>
+
+<%- links %>
+ 
+<h1>Manage</h1><p>Select Classification:</p>
+
+<%- classificationSelect %>
+
+<table id="inventoryDisplay"></table>
+
+<%#The <noscript> HTML element defines a section of HTML to be inserted 
+if a script type on the page is unsupported or if scripting is currently turned off in the browser.%>
+
+<noscript>JavaScript must be enabled to use this page.</noscript>
+
+<script src="../../js/inventory.js"></script>
