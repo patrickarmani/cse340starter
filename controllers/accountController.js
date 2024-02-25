@@ -1,11 +1,10 @@
 const utilities = require("../utilities/")
-const accountModel = require("../models/accountModel")
+const accountModel = require("../models/account-model")
 const messageModel = require("../models/messageModel")
 const bcrypt = require("bcryptjs")
 const jwt = require("jsonwebtoken")
-const invCont = require("./invController")
 require("dotenv").config()
-
+const invCont = require("./invController")
 /* ****************************************
 *  Deliver login view
 * *************************************** */
@@ -20,11 +19,12 @@ async function buildLogin(req, res, next) {
 
 /* ****************************************
 *  Deliver registration view
+* Unit  4,  deliver register view activity
 * *************************************** */
 async function buildRegister(req, res, next) {
     let nav = await utilities.getNav()
     res.render("account/register", {
-        title: "Registration",
+        title: "Register",
         nav,
         errors: null,
     })
@@ -212,8 +212,21 @@ async function processUpPassword(req, res, next) {
 
 }
 
+async function buildByClassificationId(req, res) {
+  try {
+    const classificationId = req.params.classificationId;
+    
+    const data = await invCont.getDataByClassificationId(classificationId);  
+
+    
+    res.render("home", { title: "Home", data });  
+
+  } catch (error) {
+    //  redirect to an error page
+    res.status(500).render("errors/error", { title: "Erro", message: "Error processing the request." });
+  }
+}
 
 
-  
 module.exports = {buildLogin, buildRegister, registerAccount, accountLogin, buildManagement, logoutProcess, updateAccountView, updateAccount, 
-processUpPassword}
+processUpPassword, buildByClassificationId}
